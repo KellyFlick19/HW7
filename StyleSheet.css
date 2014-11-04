@@ -1,2 +1,14 @@
 ﻿body {
+       background-color:#BADBED;
+	   text-align:center;
+	   padding:10px;
+       align-content: center;
+       align-items: center;
+       text-decoration: none;
+}
+
+.header{font-size: 40px;
+        color: black;
+        text-align:center;
+       
 }

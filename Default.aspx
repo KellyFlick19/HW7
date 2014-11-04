@@ -10,7 +10,15 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    
+    <div>
+          
+
+          <span class="header">Kelly&#39;s NFL Players Website</span></div>
+        <hr />
+     
+         <br /><a href="Default.aspx" style="color: #696969">Home</a>&nbsp; |&nbsp <a href="aboutus.aspx" style="color: #696969">About Us</a>&nbsp; |&nbsp; <a href="contactus.aspx" style="color: #696969">Contact Us</a>
+            <br /><br />
+    </div>
         <asp:SqlDataSource ID="Sql_nflplayers" runat="server" ConnectionString="<%$ ConnectionStrings:db_flick_nflplayers %>" DeleteCommand="DELETE FROM [flick_nflplayers] WHERE [PlayerID] = @PlayerID" InsertCommand="INSERT INTO [flick_nflplayers] ([FirstName], [LastName], [Team], [Position], [Weight], [Height], [Experience], [College]) VALUES (@FirstName, @LastName, @Team, @Position, @Weight, @Height, @Experience, @College)" SelectCommand="SELECT * FROM [flick_nflplayers]" UpdateCommand="UPDATE [flick_nflplayers] SET [FirstName] = @FirstName, [LastName] = @LastName, [Team] = @Team, [Position] = @Position, [Weight] = @Weight, [Height] = @Height, [Experience] = @Experience, [College] = @College WHERE [PlayerID] = @PlayerID">
             <DeleteParameters>
                 <asp:Parameter Name="PlayerID" Type="Int32" />
@@ -37,7 +45,7 @@
                 <asp:Parameter Name="PlayerID" Type="Int32" />
             </UpdateParameters>
         </asp:SqlDataSource>
-        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="PlayerID" DataSourceID="Sql_nflplayers">
+        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="PlayerID" DataSourceID="Sql_nflplayers" HorizontalAlign="Center">
             <Columns>
                 <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName" />
                 <asp:BoundField DataField="LastName" HeaderText="Last Name" SortExpression="LastName" />
