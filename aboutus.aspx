@@ -11,8 +11,9 @@
     <form id="form1" runat="server">
     
        <div style="font-size: medium">
-    <div>
-
+    
+         <img src="./Pictures/nfl.jpg" alt="NFL" border="2" class="img" style="height: 173px; width: 168px"/>
+            <div>
     <span class="header">Kelly&#39;s NFL Players Website</span></div>
         <hr />
      

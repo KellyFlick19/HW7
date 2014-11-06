@@ -10,7 +10,9 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    <div>
+   
+        <img src="./Pictures/nfl.jpg" alt="NFL" border="2" class="img" style="height: 173px; width: 168px"/>
+            <div>
           <span class="header">Kelly&#39;s NFL Players Website</span></div>
         <hr />
      
@@ -25,7 +27,7 @@
         </asp:SqlDataSource>
     
     </div>
-        <asp:DetailsView ID="DetailsView1" runat="server" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="PlayerID" DataSourceID="Sql_nflplayers" Height="50px" HorizontalAlign="Center" Width="125px">
+        <asp:DetailsView ID="DetailsView1" runat="server" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="PlayerID" DataSourceID="Sql_nflplayers" Height="50px" HorizontalAlign="Center" Width="243px" BackColor="Yellow" BorderColor="Black" BorderStyle="Solid" BorderWidth="2px" CellPadding="5" CellSpacing="3">
             <Fields>
                 <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName" />
                 <asp:BoundField DataField="LastName" HeaderText="Last Name" SortExpression="LastName" />
@@ -36,7 +38,13 @@
                 <asp:BoundField DataField="Experience" HeaderText="Experience" SortExpression="Experience" />
                 <asp:BoundField DataField="College" HeaderText="College" SortExpression="College" />
             </Fields>
+            <HeaderStyle BorderStyle="Solid" />
+            <RowStyle BorderStyle="Solid" />
         </asp:DetailsView>
     </form>
+     <br />
+    <hr />
+
+    <i class="footer">Copyright © 2014. Created by Kelly Flick</i>
 </body>
 </html>
