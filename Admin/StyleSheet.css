@@ -8,8 +8,14 @@ body {
        text-decoration: none;
 }
 
-.header{font-size: 40px;
-        color: black;
-        text-align:center;
+h1 {
+    font-size: 60px;
+    color: White;
+    text-align: center;
+}
        
+
+#date {font-size: 20px;
+       font-weight:bold;
+       color:white
 }

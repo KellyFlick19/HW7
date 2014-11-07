@@ -15,20 +15,21 @@
    <div id="container">
 
         <div id="header">
-            <h1>Kelly's NFL Players Website</h1>
+            <h1>NFL Players Website</h1>
 
             
         </div> 
          
        <div id="date" style="margin-left: 960px">
-            <asp:Label ID="datelbl" runat="server"></asp:Label>
+            Date: <asp:Label ID="datelbl" runat="server"></asp:Label>
             <br />
-         <asp:Label ID="timelbl" runat="server"></asp:Label>
+            <br />
+            Time: <asp:Label ID="timelbl" runat="server"></asp:Label>
          </div>
-
+       <br />
         <div id="right_header">
            
-            <asp:Image ID="Image_nfl" runat="server" ImageAlign="Middle" ImageUrl="~/Pictures/nfl.jpg" />
+            <asp:Image ID="Image_nfl" runat="server" ImageAlign="Middle" ImageUrl="~/Pictures/americanfl.jpg" BorderColor="White" BorderStyle="Solid" BorderWidth="5px" />
             
         </div> 
 
@@ -37,12 +38,11 @@
              <hr />
      
          <br />
-           <asp:HyperLink ID="link_home" runat="server" style="color: #696969" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>&nbsp;&nbsp; |&nbsp;&nbsp; 
-           <asp:HyperLink ID="link_AboutUs" runat="server" style="color: #696969" NavigateUrl="~/aboutus.aspx">About Us</asp:HyperLink>&nbsp;&nbsp; |&nbsp;&nbsp; 
-           <asp:HyperLink ID="link_Contact" runat="server" style="color: #696969" NavigateUrl="~/Contactus.aspx">Contact</asp:HyperLink>&nbsp;&nbsp; |&nbsp;
-           <asp:HyperLink ID="link_Admin" runat="server" style="color: #696969" NavigateUrl="~/Admin/Default.aspx">Admin</asp:HyperLink>&nbsp; |&nbsp;
-           <asp:HyperLink ID="link_Search" runat="server" style="color: #696969" NavigateUrl="~/search.aspx">Search</asp:HyperLink>&nbsp;&nbsp; |&nbsp;&nbsp; 
-           <asp:LoginStatus ID="LoginStatus1" runat="server" style="color: #696969" LogoutPageUrl="~/Default.aspx" />
+           <asp:HyperLink ID="link_home" runat="server" style="color: #ffffff" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>&nbsp;&nbsp; |&nbsp;&nbsp; 
+           <asp:HyperLink ID="link_AboutUs" runat="server" style="color: #ffffff" NavigateUrl="~/aboutus.aspx">About Us</asp:HyperLink>&nbsp;&nbsp; |&nbsp;&nbsp; 
+           <asp:HyperLink ID="link_Contact" runat="server" style="color: #ffffff" NavigateUrl="~/Contactus.aspx">Contact Us</asp:HyperLink>&nbsp;&nbsp; |&nbsp;
+           <asp:HyperLink ID="link_Search" runat="server" style="color: #ffffff" NavigateUrl="~/search.aspx">Search</asp:HyperLink>&nbsp;&nbsp; |&nbsp;&nbsp; 
+           <asp:LoginStatus ID="LoginStatus1" runat="server" style="color:#ffffff " LogoutPageUrl="~/Default.aspx" />
             <br /><br />
         </div>
 

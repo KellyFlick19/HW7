@@ -6,9 +6,19 @@
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_flick_nflplayers %>" SelectCommand="SELECT * FROM [flick_nflplayers]"></asp:SqlDataSource>
     <asp:TextBox ID="tbsearch" runat="server" Height="19px" Width="203px"></asp:TextBox> &nbsp; &nbsp;
     <asp:Button ID="btnsearch" runat="server" Text="Search" Height="26px" Width="105px" />
+    
+    <% If Not IsPostBack Then%>
+    
     <br />
     <br />
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="PlayerID" DataSourceID="SqlDataSource1" HorizontalAlign="Center" Width="269px" AllowPaging="True" BorderColor="Black" BorderStyle="Solid" BorderWidth="2px" CellPadding="5" CellSpacing="3" Height="374px">
+    <%Else%>
+
+           
+    
+    <br />
+    <br />
+    <br />
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="PlayerID" DataSourceID="SqlDataSource1" HorizontalAlign="Center" Width="250px" AllowPaging="True" BorderColor="Black" BorderStyle="Solid" BorderWidth="2px" CellPadding="3" CellSpacing="4" Height="152px">
         <Columns>
             <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName" />
             <asp:BoundField DataField="LastName" HeaderText="Last Name" SortExpression="LastName" />
@@ -23,5 +33,6 @@
      <HeaderStyle BorderStyle="Solid" BackColor="Yellow" />
      <RowStyle BorderStyle="Solid" BackColor="Yellow" />
     </asp:GridView>
+     <% End If%>
 </asp:Content>
 

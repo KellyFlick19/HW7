@@ -1,5 +1,5 @@
 ﻿body {
-       background-color:#BADBED;
+       background-color:#6599FF;
 	   text-align:center;
 	   padding:10px;
        align-content: center;
@@ -7,7 +7,12 @@
        text-decoration: none;
 }
 
-.h1{font-size: 40px;
-        color: black;
+h1 {font-size: 60px;
+        color: white;
         text-align:center;
        }
+
+#date {font-size: 20px;
+       font-weight:bold;
+       color:white;
+}
