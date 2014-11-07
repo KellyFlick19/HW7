@@ -41,6 +41,7 @@
            <asp:HyperLink ID="link_AboutUs" runat="server" style="color: #696969" NavigateUrl="~/aboutus.aspx">About Us</asp:HyperLink>&nbsp;&nbsp; |&nbsp;&nbsp; 
            <asp:HyperLink ID="link_Contact" runat="server" style="color: #696969" NavigateUrl="~/Contactus.aspx">Contact</asp:HyperLink>&nbsp;&nbsp; |&nbsp;
            <asp:HyperLink ID="link_Admin" runat="server" style="color: #696969" NavigateUrl="~/Admin/Default.aspx">Admin</asp:HyperLink>&nbsp; |&nbsp;
+           <asp:HyperLink ID="link_Search" runat="server" style="color: #696969" NavigateUrl="~/search.aspx">Search</asp:HyperLink>&nbsp;&nbsp; |&nbsp;&nbsp; 
            <asp:LoginStatus ID="LoginStatus1" runat="server" style="color: #696969" LogoutPageUrl="~/Default.aspx" />
             <br /><br />
         </div>
