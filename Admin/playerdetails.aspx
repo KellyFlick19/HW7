@@ -1,9 +1,10 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/players.master" AutoEventWireup="false" CodeFile="playerdetails.aspx.vb" Inherits="playerdetails" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/players.master" AutoEventWireup="false" CodeFile="playerdetails.aspx.vb" Inherits="Admin_playerdetails" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server"> Kelly's NFL Players Website
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server"> Player Details
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:SqlDataSource ID="Sql_nflplayers" runat="server" ConnectionString="<%$ ConnectionStrings:db_flick_nflplayers %>" SelectCommand="SELECT * FROM [flick_nflplayers] WHERE ([PlayerID] = @PlayerID)" DeleteCommand="DELETE FROM [flick_nflplayers] WHERE [PlayerID] = @PlayerID" InsertCommand="INSERT INTO [flick_nflplayers] ([FirstName], [LastName], [Team], [Position], [Weight], [Height], [Experience], [College]) VALUES (@FirstName, @LastName, @Team, @Position, @Weight, @Height, @Experience, @College)" UpdateCommand="UPDATE [flick_nflplayers] SET [FirstName] = @FirstName, [LastName] = @LastName, [Team] = @Team, [Position] = @Position, [Weight] = @Weight, [Height] = @Height, [Experience] = @Experience, [College] = @College WHERE [PlayerID] = @PlayerID">
+    <div>
+        <asp:SqlDataSource ID="Sql_nflplayers" runat="server" ConnectionString="<%$ ConnectionStrings:db_flick_nflplayers %>" SelectCommand="SELECT * FROM [flick_nflplayers] WHERE ([PlayerID] = @PlayerID)" DeleteCommand="DELETE FROM [flick_nflplayers] WHERE [PlayerID] = @PlayerID" InsertCommand="INSERT INTO [flick_nflplayers] ([FirstName], [LastName], [Team], [Position], [Weight], [Height], [Experience], [College]) VALUES (@FirstName, @LastName, @Team, @Position, @Weight, @Height, @Experience, @College)" UpdateCommand="UPDATE [flick_nflplayers] SET [FirstName] = @FirstName, [LastName] = @LastName, [Team] = @Team, [Position] = @Position, [Weight] = @Weight, [Height] = @Height, [Experience] = @Experience, [College] = @College WHERE [PlayerID] = @PlayerID">
             <DeleteParameters>
                 <asp:Parameter Name="PlayerID" Type="Int32" />
             </DeleteParameters>
@@ -33,7 +34,7 @@
             </UpdateParameters>
         </asp:SqlDataSource>
     
-   
+    </div>
         <asp:Label ID="lbldelete" runat="server"></asp:Label>
         <asp:DetailsView ID="DetailsView1" runat="server" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="PlayerID" DataSourceID="Sql_nflplayers" Height="50px" HorizontalAlign="Center" Width="243px" BackColor="Yellow" BorderColor="Black" BorderStyle="Solid" BorderWidth="2px" CellPadding="5" CellSpacing="3">
             <Fields>
@@ -45,9 +46,10 @@
                 <asp:BoundField DataField="Height" HeaderText="Height" SortExpression="Height" />
                 <asp:BoundField DataField="Experience" HeaderText="Experience" SortExpression="Experience" />
                 <asp:BoundField DataField="College" HeaderText="College" SortExpression="College" />
+                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
             </Fields>
             <HeaderStyle BorderStyle="Solid" />
             <RowStyle BorderStyle="Solid" />
         </asp:DetailsView>
-</asp:Content>
+ </asp:Content>
 

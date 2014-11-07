@@ -1,4 +1,5 @@
-﻿body {
+﻿
+body {
        background-color:#BADBED;
 	   text-align:center;
 	   padding:10px;
@@ -7,7 +8,8 @@
        text-decoration: none;
 }
 
-.h1{font-size: 40px;
+.header{font-size: 40px;
         color: black;
         text-align:center;
-       }
+       
+}

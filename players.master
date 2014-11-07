@@ -1,0 +1,62 @@
+﻿<%@ Master Language="VB" CodeFile="players.master.vb" Inherits="players" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    </title>
+       <link rel="stylesheet" type="text/css" href="StyleSheet.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+   <div id="container">
+
+        <div id="header">
+            <h1>Kelly's NFL Players Website</h1>
+
+            
+        </div> 
+         
+       <div id="date" style="margin-left: 960px">
+            <asp:Label ID="datelbl" runat="server"></asp:Label>
+            <br />
+         <asp:Label ID="timelbl" runat="server"></asp:Label>
+         </div>
+
+        <div id="right_header">
+           
+            <asp:Image ID="Image_nfl" runat="server" ImageAlign="Middle" ImageUrl="~/Pictures/nfl.jpg" />
+            
+        </div> 
+
+     
+       <div id="menu">
+             <hr />
+     
+         <br />
+           <asp:HyperLink ID="link_home" runat="server" style="color: #696969" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>&nbsp;&nbsp; |&nbsp;&nbsp; 
+           <asp:HyperLink ID="link_AboutUs" runat="server" style="color: #696969" NavigateUrl="~/aboutus.aspx">About Us</asp:HyperLink>&nbsp;&nbsp; |&nbsp;&nbsp; 
+           <asp:HyperLink ID="link_Contact" runat="server" style="color: #696969" NavigateUrl="~/Contactus.aspx">Contact</asp:HyperLink>&nbsp;&nbsp; |&nbsp;
+           <asp:HyperLink ID="link_Admin" runat="server" style="color: #696969" NavigateUrl="~/Admin/Default.aspx">Admin</asp:HyperLink>&nbsp; |&nbsp;
+           <asp:LoginStatus ID="LoginStatus1" runat="server" style="color: #696969" LogoutPageUrl="~/Default.aspx" />
+            <br /><br />
+        </div>
+
+
+       <div id="main">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+       <br />
+       <hr />
+       <div id="footer">
+             <i class="footer">Copyright © 2014. Created by Kelly Flick</i>
+        </div>
+       </div>
+    </form>
+</body>
+</html>
